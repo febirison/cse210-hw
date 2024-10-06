@@ -1,3 +1,4 @@
+// Code by Anderson Okai for CSE210 Assignment
 using System;
 
 // A code template for the category of things known as Journal Prompts
