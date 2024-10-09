@@ -1,23 +1,23 @@
 public class Reference
 {
-    private string book;
-    private int chapter;
-    private int verseStart;
-    private int? verseEnd; // Nullable int for handling verse ranges
+    private string _book;
+    private int _chapter;
+    private int _verseStart;
+    private int? _verseEnd; // Nullable int for handling verse ranges
 
     public Reference(string book, int chapter, int verseStart, int? verseEnd = null)
     {
-        this.book = book;
-        this.chapter = chapter;
-        this.verseStart = verseStart;
-        this.verseEnd = verseEnd;
+        _book = book;
+        _chapter = chapter;
+        _verseStart = verseStart;
+        _verseEnd = verseEnd;
     }
 
     public string GetDisplayText()
     {
-        if (verseEnd != null)
-            return $"{book} {chapter}:{verseStart}-{verseEnd}";
+        if (_verseEnd != null)
+            return $"{_book} {_chapter}:{_verseStart}-{_verseEnd}";
         else
-            return $"{book} {chapter}:{verseStart}";
+            return $"{_book} {_chapter}:{_verseStart}";
     }
 }

@@ -1,26 +1,29 @@
 public class Word
 {
-    private string text;
-    private bool isHidden;
+    private string _text;
+    private bool _isHidden;
 
     public Word(string text)
     {
-        this.text = text;
-        isHidden = false;
+        _text = text;
+        _isHidden = false;
     }
 
+    // Hide the word
     public void Hide()
     {
-        isHidden = true;
+        _isHidden = true;
     }
 
+    // Get the display text (hidden words appear as underscores)
     public string GetDisplayText()
     {
-        return isHidden ? "____" : text;
+        return _isHidden ? "____" : _text;
     }
 
+    // Check if the word is hidden
     public bool IsHidden()
     {
-        return isHidden;
+        return _isHidden;
     }
 }
